@@ -1340,6 +1340,30 @@ input[type=range]::-moz-range-thumb {
     align-items: center;
 }
 
+
+#creatorSteamPanel {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#creatorSteamPanel img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    border-radius: 2px;
+    display: block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#creatorSteamPanel img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px var(--border-color);
+}
+
+
+
 </style>
 
 <!-- PAINEL DE ACESSO INICIAL -->
@@ -1348,6 +1372,15 @@ input[type=range]::-moz-range-thumb {
 </div>
 
 <div id=menuStats>
+
+<!-- PAINEL DA CRIADORA / STEAM (Lado Direito) -->
+<div id="creatorSteamPanel" class="stats-panel">
+    <a href="https://steamcommunity.com/id/avyrag/" target="_blank" title="Visite meu perfil na Steam!">
+        <img src="comunidadeSteam.png" alt="Paloma - Criadora do Jogo">
+    </a>
+</div>
+
+
     <div class=stats-panel id=rankPanel>
         <div id=legacyIconsContainer></div>
         <div class=panel-separator></div>
@@ -1381,6 +1414,9 @@ input[type=range]::-moz-range-thumb {
         <h4 data-translate-key=stats_active_modes>Modos de Jogo</h4>
         <div id=activeModesList></div>
     </div>
+	
+	
+	
 </div>
 <div id=mainMenu>
     <h1 data-translate-key=title class=menu-title>Batalha<br>de Cores</h1>
@@ -1431,6 +1467,7 @@ input[type=range]::-moz-range-thumb {
         </div>
     </div>
 </div>
+
 <div id=version-info>v1.0.0</div>
 <div class=hidden id=modalOverlay>
     <div id=panelContainer>
